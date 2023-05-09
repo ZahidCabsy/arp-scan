@@ -428,8 +428,10 @@ main(int argc, char *argv[]) {
       c_netmask = make_message("%s", cp);
       snprintf(localnet_descr, 32, "%s:%s", c_network, c_netmask);
       if (!plain_flag) {
+#if 0	      
          warn_msg("Target list from interface: network %s netmask %s",
                   c_network, c_netmask);
+#endif
       }
       free(c_network);
       free(c_netmask);
